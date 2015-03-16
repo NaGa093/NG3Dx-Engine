@@ -41,3 +41,14 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+#NaGa
+*.exe
+*.fx
+*.suo
+*.cod
+*.user
+DirectX11Test/DirectX11Test/bin/
+DirectX11Test/DirectX11Test/obj/
+DirectX11Test/NG3Dx/obj/
+DirectX11Test/NG3Dx/bin/
