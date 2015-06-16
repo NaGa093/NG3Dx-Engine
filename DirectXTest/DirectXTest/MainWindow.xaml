@@ -1,0 +1,9 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:NG3Dx="clr-namespace:NG3Dx;assembly=NG3Dx" x:Name="Layout_Window" x:Class="DirectXTest.MainWindow"
+        Title="MainWindow" Height="361" Width="533" SizeChanged="Layout_Window_SizeChanged">
+    <Grid Width="Auto" Height="Auto">
+        <NG3Dx:DirectXControl x:Name="DirectXControl_UserControl" Width="533" Height="361" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+    </Grid>
+</Window>

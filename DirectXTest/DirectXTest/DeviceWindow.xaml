@@ -1,0 +1,15 @@
+﻿<Window x:Name="DevicesWindow" x:Class="DirectXTest.DeviceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Devices" Height="191" Width="348" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="21,18,0,0" TextWrapping="Wrap" Text="Devices:" VerticalAlignment="Top" Height="22" Width="45"/>
+        <ComboBox x:Name="Devices_ComboBox" HorizontalAlignment="Left" Margin="102,18,0,0" VerticalAlignment="Top" Width="183" SelectionChanged="Devices_ComboBox_SelectionChanged"/>
+        <TextBlock HorizontalAlignment="Left" Margin="21,72,0,0" TextWrapping="Wrap" Text="Resolution:" VerticalAlignment="Top" Height="22" Width="68"/>
+        <TextBlock HorizontalAlignment="Left" Margin="21,45,0,0" TextWrapping="Wrap" Text="Dedicate Video Memory:" VerticalAlignment="Top" Height="22" Width="136" RenderTransformOrigin="0.485,0.955"/>
+        <TextBlock x:Name="Memory_TextBlock" HorizontalAlignment="Left" Margin="171,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="114"/>
+        <ComboBox x:Name="Resolution_ComboBox" HorizontalAlignment="Left" Margin="102,72,0,0" VerticalAlignment="Top" Width="183"/>
+        <Button x:Name="OK_Button" Content="OK" HorizontalAlignment="Left" Margin="241,117,0,0" VerticalAlignment="Top" Width="75" Click="OK_Button_Click"/>
+
+    </Grid>
+</Window>
