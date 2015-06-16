@@ -47,7 +47,7 @@ Temporary Items
 *.suo
 *.cod
 *.user
-DirectX11Test/DirectX11Test/bin/
-DirectX11Test/DirectX11Test/obj/
-DirectX11Test/NG3Dx/obj/
-DirectX11Test/NG3Dx/bin/
+DirectXTest/DirectXTest/bin/
+DirectXTest/DirectXTest/obj/
+DirectXTest/NG3Dx/obj/
+DirectXTest/NG3Dx/bin/
