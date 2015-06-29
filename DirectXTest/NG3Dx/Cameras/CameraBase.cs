@@ -14,8 +14,8 @@ namespace NG3Dx.Cameras
         
         public abstract void Move(int value);
         public abstract void Strafe(int value);
-        public abstract void Yaw(int value);
-        public abstract void Pitch(int value);
+        public abstract void Yaw(double value);
+        public abstract void Pitch(double value);
 
         public Vector3 Eye { get; set; }
         public Vector3 Target { get; set; }

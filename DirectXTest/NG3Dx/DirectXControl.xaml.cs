@@ -1,6 +1,6 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Windows;
 using System.Windows.Input;
-using NG3Dx.Helpers;
 
 namespace NG3Dx
 {
@@ -20,9 +20,10 @@ namespace NG3Dx
             Loaded += DirectXControl_Loaded;
             Focusable = true;
             _currentPosition = new Point(0,0);
+            Cursor = Cursors.None;
         }
 
-        void DirectXControl_Loaded(object sender, System.Windows.RoutedEventArgs e)
+        void DirectXControl_Loaded(object sender, RoutedEventArgs e)
         {
             Focus();
         }
@@ -49,17 +50,35 @@ namespace NG3Dx
 
         void DirectXControl_MouseMove(object sender, MouseEventArgs e)
         {
+            const double sensitivity = 10.0;
+
             if (_currentPosition.X == 0 && _currentPosition.Y == 0)
             {
-                _currentPosition = MouseHelper.GetMousePosition();
+                _currentPosition = Mouse.GetPosition(this);
             }
+
+            var y = -(_currentPosition.Y - Mouse.GetPosition(this).Y);
+            var x = -(_currentPosition.X - Mouse.GetPosition(this).X);
+
+            if (Mouse.GetPosition(this).X  == 0)
+            {
+                (DirectXDeviceManager.DirectXDevice.Camera).Yaw(-10 / sensitivity);
+            }
+            else if (Mouse.GetPosition(this).X == DesiredSize.Width - 1)
+            {
+                (DirectXDeviceManager.DirectXDevice.Camera).Yaw(10 / sensitivity);
+            }
+            else
+            {
+                (DirectXDeviceManager.DirectXDevice.Camera).Yaw(x / sensitivity);
+            }
+
+            (DirectXDeviceManager.DirectXDevice.Camera).Pitch(y / sensitivity);
             
-            (DirectXDeviceManager.DirectXDevice.Camera).Pitch(-(_currentPosition.Y - MouseHelper.GetMousePosition().Y));
-            (DirectXDeviceManager.DirectXDevice.Camera).Yaw(-(_currentPosition.X - MouseHelper.GetMousePosition().X));
-            _currentPosition = MouseHelper.GetMousePosition();
+            _currentPosition = Mouse.GetPosition(this);
         }
 
-        void DirectXControl_SizeChanged(object sender, System.Windows.SizeChangedEventArgs e)
+        void DirectXControl_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             DirectXDeviceManager.DirectXDevice.Resize();
         }

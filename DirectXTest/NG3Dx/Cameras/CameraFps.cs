@@ -31,19 +31,19 @@ namespace NG3Dx.Cameras
             SetView(Eye, Target, Up);
         }
 
-        public override void Yaw(int x)
+        public override void Yaw(double x)
         {
-            var rot = Matrix.RotationY(x / 100.0f);
+            var rot = Matrix.RotationY((float)x / 100.0f);
             Look = Vector3.TransformCoordinate(Look, rot);
 
             Target = Eye + Look;
             SetView(Eye, Target, Up);
         }
 
-        public override void Pitch(int y)
+        public override void Pitch(double y)
         {
             var axis = Vector3.Cross(Up, Look);
-            var rotation = y / 100.0f;
+            var rotation = (float)y / 100.0f;
             _pitchVal = _pitchVal + rotation;
 
             const float halfPi = (float)Math.PI / 2.0f;
