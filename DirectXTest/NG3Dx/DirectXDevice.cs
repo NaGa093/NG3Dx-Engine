@@ -116,6 +116,7 @@ namespace NG3Dx
                 _models = Model.CreateModels(AppDomain.CurrentDomain.BaseDirectory + @"MetroModel\duck\duck.dae", AppDomain.CurrentDomain.BaseDirectory + @"MetroModel\duck", _device);
                 _models[0].Transform = Matrix.Translation(100, 50, 200);
                 _models.AddRange(Model.CreateModels(AppDomain.CurrentDomain.BaseDirectory + @"MetroModel\Small Tropical Island\Small Tropical Island.obj", AppDomain.CurrentDomain.BaseDirectory + @"MetroModel\Small Tropical Island", _device));
+                //_models = Model.CreateModels(AppDomain.CurrentDomain.BaseDirectory + @"MetroModel\riga\riga.fbx", AppDomain.CurrentDomain.BaseDirectory + @"MetroModel\riga\,", _device);
             }
 
             _context.ClearRenderTargetView(_renderTargetView, new Color4(Color.Black));
