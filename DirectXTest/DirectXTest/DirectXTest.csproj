@@ -15,7 +15,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,6 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -91,6 +92,18 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="MetroModel\duck\duck.dae">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro.fbx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\Small Tropical Island\Small Tropical Island.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\Small Tropical Island\Small_Tropical_Island.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -106,10 +119,497 @@
       <Name>NG3Dx</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\bricks_kirpic_1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\concrete_8.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\concrete_bashnya.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\concrete_beton.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\concrete_beton_floor.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\concrete_beton_snow.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\concrete_big_d6.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\concrete_floor_dirty.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\concrete_fontan_01.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\concrete_opalubka06.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\concrete_opalubka_3.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\concrete_opalubka_tunnel.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\concrete_ostankino.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\concrete_plita_01.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\concrete_razlom_test.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\concrete_snow_break_floor.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\concrete_tile_07.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\concrete_vihod_wall_01.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\door_04.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\door_1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\door_9.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\door_dver_b.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\door_d_03.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\door_met_resotkam.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\floor_asphalt_snow.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\floor_beton_pol_dirt2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\floor_fence_metall_01.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\floor_fence_metall_02.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\floor_pol_musor_kroska.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\floor_reshetka.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\floor_reshetka1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\garbage_library_l_ruins.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_07.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_08_mokriy.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_3.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_4.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_5.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_6.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_armatura.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_armatura_snow.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_balka.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_bolt.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_budk.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_corr_dsc.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_corr_snow.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_d5.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_d6.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_d8.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_djural.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_djural_new.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_door_m.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_flanec_01.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_germo.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_grating_kal.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_grey.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_kr_mas.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_l21.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_l21_02.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_l21_03.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_l21_list.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_l21_list_02.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_l21_ser.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_lest.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_list.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_list_sifer.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_plankbronz.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_roof.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_rustmixed.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_rust_balka_snow.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_shaft.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_shifer.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_stena_m_01.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_tile.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_truba8.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_trub_tonnel.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\metal_tube_snow.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\props_bibl_lepnina.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\props_boiler-room01.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\props_boiler-room01_2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\props_device.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\props_elevator.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\props_elevator_stuff.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\props_germozatvor_door.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\props_kran.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\props_lamp_arc_discharge.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\props_lamp_nastennaya.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\props_lift.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\props_met_skaff.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\props_multiprovod_01.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\props_setka_rza.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\props_skaff_cist.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\props_taxofon.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\props_wood_skaff.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\props_zatvor.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\snow_l10.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\snow_l17.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\snow_snowdrift.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\snow_super3_det.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\snow_tile_01.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\stone_library_l_marble_black.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\stone_library_l_marble_snow.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\stone_marble_l21.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\stone_marble_l21_02.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\stone_marble_uzor.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\stone_stena_marbl_m_03.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\stucco_kr.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\stucco_potolok.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\stucco_potolok1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\stucco_potolok_2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\stucco_sten.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\stucco_stucaturka1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\terrain_biblio_kotlovan.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\terrain_l21.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\terrain_l21_kusok.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\tile_marmur.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\tile_marmur_koc.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\tile_pol_2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\tile_rizhskaya_01.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\tile_stena_02.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\tile_stena_l21.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\tile_wall_plitka2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\wall_kraskirpich_burn.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\wall_kraskirpich_s.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\wall_stucaturka_raz.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\wall_stucaturka_stena.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\wall_truba_beton.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\window_l21.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\window_library_l_windows.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\wm_grjazpjatno.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\wm_kabel_tonnel.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\wm_ostankinosnow.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\wm_potek_01.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\wm_potek_04.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\wm_potek_a.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\wm_pyatno_2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\wm_seben.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\wm_trescina_liana.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\wood_doski_snow.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\wood_skaf_tiles_old.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\wood_tiles.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\l00_intro\l00_intro\tex\wood_tiles_old.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MetroModel\duck\duckCM.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MetroModel\Small Tropical Island\Maps\arl1b.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\Small Tropical Island\Maps\grs1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\Small Tropical Island\Maps\lv1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\Small Tropical Island\Maps\plvs1c.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\Small Tropical Island\Maps\rc1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\Small Tropical Island\Maps\snd1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\Small Tropical Island\Maps\terrain_mtl1_bumpamt.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\Small Tropical Island\sti1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\Small Tropical Island\sti10.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\Small Tropical Island\sti2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\Small Tropical Island\sti3.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\Small Tropical Island\sti4.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\Small Tropical Island\sti5.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\Small Tropical Island\sti6.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\Small Tropical Island\sti7.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\Small Tropical Island\sti8.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MetroModel\Small Tropical Island\sti9.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>cd Shaders
-fxc /Fc /Od /Zi /T fx_5_0 /Fo grid.hlsl grid.fx</PostBuildEvent>
+fxc /Fc /Od /Zi /T fx_5_0 /Fo grid.hlsl grid.fx
+fxc /Fc /Od /Zi /T fx_5_0 /Fo model.hlsl model.fx</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -11,7 +11,7 @@
     <AssemblyName>NG3Dx</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <NuGetPackageImportStamp>719184c9</NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>75e03837</NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,8 +31,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AssimpNet">
+    <Reference Include="AssimpNet, Version=3.3.1.0, Culture=neutral, PublicKeyToken=0d51b391f59f42a6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\AssimpNet.3.3.1\lib\net45\AssimpNet.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
@@ -61,10 +65,15 @@
     <Compile Include="DirectXDevice.cs" />
     <Compile Include="DirectXDeviceManager.cs" />
     <Compile Include="Effects\EffectBase.cs" />
+    <Compile Include="Effects\EffectModel.cs" />
     <Compile Include="Effects\EffectGrid.cs" />
     <Compile Include="Enums\Projection.cs" />
+    <Compile Include="Lights\DirectionalLight.cs" />
+    <Compile Include="Lights\PointLight.cs" />
+    <Compile Include="Lights\SpotLight.cs" />
     <Compile Include="Models\Grid.cs" />
-    <Compile Include="Models\ModelBase.cs" />
+    <Compile Include="Models\Model.cs" />
+    <Compile Include="Models\Base.cs" />
     <Compile Include="Models\Vertex.cs" />
     <Compile Include="Helpers\DeviceHelper.cs" />
     <Compile Include="LibTessDotNet\Dict.cs" />
@@ -84,6 +93,15 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assimp32.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assimp64.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Shaders\model.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Shaders\grid.fx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

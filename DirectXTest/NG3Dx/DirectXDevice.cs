@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Threading.Tasks;
 using System.Windows;
@@ -6,6 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Interop;
 using NG3Dx.Cameras;
 using NG3Dx.Helpers;
+using NG3Dx.Models;
 using SlimDX;
 using SlimDX.Direct3D11;
 using SlimDX.DXGI;
@@ -32,6 +34,7 @@ namespace NG3Dx
         public CameraBase Camera { get; private set; }
 
         private Grid _grid;
+        private List<Model> _models;
 
         public DirectXDevice(Control control)
         {
@@ -39,7 +42,7 @@ namespace NG3Dx
             FactoryHelper = new DeviceHelper();
             Camera = new CameraFps
             {
-                Eye = new Vector3(200, 150, 0),
+                Eye = new Vector3(-200, 150, -100),
                 Target = new Vector3(0, 0, 0),
                 Up = new Vector3(0, 1, 0),
                 Look = new Vector3(1, 0, 0)
@@ -72,7 +75,7 @@ namespace NG3Dx
                         Scaling = DisplayModeScaling.Unspecified
                     },
                     SampleDescription = new SampleDescription(4, _msaaCount - 1),
-                    Flags = SwapChainFlags.None,
+                    Flags = SwapChainFlags.AllowModeSwitch,
                     SwapEffect = SwapEffect.Discard
                 };
 
@@ -89,7 +92,7 @@ namespace NG3Dx
                     {
                         Application.Current.Dispatcher.Invoke(Render);
                     }
-                    catch
+                    catch (Exception)
                     {
 
                     }
@@ -107,10 +110,23 @@ namespace NG3Dx
                 _grid = new Grid(_device,50,100.0f);
             }
 
+            if (_models == null)
+            {
+                //_models = Model.CreateModels(AppDomain.CurrentDomain.BaseDirectory + @"MetroModel\l00_intro\l00_intro.fbx", AppDomain.CurrentDomain.BaseDirectory + @"MetroModel\", _device);
+                _models = Model.CreateModels(AppDomain.CurrentDomain.BaseDirectory + @"MetroModel\duck\duck.dae", AppDomain.CurrentDomain.BaseDirectory + @"MetroModel\duck", _device);
+                _models[0].Transform = Matrix.Translation(100, 50, 200);
+                _models.AddRange(Model.CreateModels(AppDomain.CurrentDomain.BaseDirectory + @"MetroModel\Small Tropical Island\Small Tropical Island.obj", AppDomain.CurrentDomain.BaseDirectory + @"MetroModel\Small Tropical Island", _device));
+            }
+
             _context.ClearRenderTargetView(_renderTargetView, new Color4(Color.Black));
             _context.ClearDepthStencilView(_depthStencil, DepthStencilClearFlags.Depth | DepthStencilClearFlags.Stencil, 1.0f, 0);
             
             _grid.Render(_context, Camera);
+
+            foreach (var model in _models)
+            {
+                model.Render(_context, Camera);
+            }
             _swapChain.Present(0, PresentFlags.None);
         }
 

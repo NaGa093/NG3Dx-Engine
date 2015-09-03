@@ -6,11 +6,11 @@ using SlimDX.Direct3D11;
 
 namespace NG3Dx.Models
 {
-    public class Grid : ModelBase
+    public class Grid : Base
     {
         public Grid(Device device, int cellsPerSide, float cellSize)
         {
-            EffectBase = new EffectGrid(device);
+            Effectbase = new EffectGrid(device);
 
             var numLines = cellsPerSide + 1;
             var gridVertexStride = Marshal.SizeOf(typeof(Vector3));
@@ -45,17 +45,23 @@ namespace NG3Dx.Models
                 VertexBuffer = new Buffer(device, vertices, sizeInBytes, ResourceUsage.Default, BindFlags.VertexBuffer, CpuAccessFlags.None, ResourceOptionFlags.None, 0);
             }
             VertexBufferBinding = new VertexBufferBinding(VertexBuffer, gridVertexStride, 0);
+
+            SetColor(new Color4(1,1,1,1));
+        }
+
+        public override sealed void SetColor(Color4 color)
+        {
+            Effectbase.EffectVectorVariable.Set(color);
         }
 
         public override void Render(DeviceContext context, CameraBase camera)
         {
-            EffectBase.EffectMatrixVariable.SetMatrix(Transform * camera.ViewProjection);
-            context.InputAssembler.InputLayout = EffectBase.InputLayout;
+            Effectbase.EffectMatrixVariable.SetMatrix(Transform * camera.ViewProjection);
+            context.InputAssembler.InputLayout = Effectbase.InputLayout;
             context.InputAssembler.SetVertexBuffers(0, VertexBufferBinding);
-            EffectBase.EffectVectorVariable.Set(Color);
 
             context.InputAssembler.PrimitiveTopology = PrimitiveTopology.LineList;
-            EffectBase.EffectTechnique.GetPassByIndex(0).Apply(context);
+            Effectbase.EffectTechnique.GetPassByIndex(0).Apply(context);
             context.Draw(Vertices, 0);
         }
     }
